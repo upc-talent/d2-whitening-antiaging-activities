@@ -167,6 +167,17 @@ body {
     z-index: 2;
     border: 2px solid var(--glass-border);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 8px;
+}
+
+.avatar-icon {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    display: block;
+    margin: auto;
 }
 
 .team-info {
@@ -192,8 +203,10 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
     color: rgba(255, 255, 255, 0.9);
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
@@ -228,6 +241,7 @@ body {
     height: 90px;
     font-size: 26px;
     box-shadow: 0 0 20px rgba(248, 153, 29, 0.5);
+    padding: 10px;
 }
 
 .rank-1 .team-name {
@@ -468,7 +482,7 @@ body {
     }
 
     .podium-bar {
-        font-size: 24px;
+        font-size: 12px;
     }
 }
 

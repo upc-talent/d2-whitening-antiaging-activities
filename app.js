@@ -73,6 +73,8 @@ async function initLeaderboard() {
     if (top4[2]) renderOrder.push({...top4[2], rank: 3});
     if (top4[3]) renderOrder.push({...top4[3], rank: 4});
 
+    const ordinals = ['', '1st Place', '2nd Place', '3rd Place', '4th Place'];
+
     loader.classList.add('hidden');
     
     renderOrder.forEach((team, index) => {
@@ -84,9 +86,11 @@ async function initLeaderboard() {
                 <div class="team-name">${team.name.toUpperCase()}</div>
                 <div class="team-score">${team.points} pts</div>
             </div>
-            <div class="team-avatar">${team.name.replace(/[^0-9]/g, '') || team.name.charAt(0).toUpperCase()}</div>
+            <div class="team-avatar">
+                <img src="pharmacist.png" alt="Pharmacist" class="avatar-icon">
+            </div>
             <div class="podium-bar">
-                <span>${team.rank}</span>
+                <span>${ordinals[team.rank]}</span>
             </div>
         `;
         container.appendChild(item);
